@@ -29,13 +29,13 @@ export function Breadcrumb() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.threadhub.in/" // example prod URL
+        "item": "https://www.ethnicjunction.com/" // example prod URL
       },
       ...breadcrumbs.map((bc, index) => ({
         "@type": "ListItem",
         "position": index + 2,
         "name": bc.name,
-        "item": `https://www.threadhub.in${bc.href}`
+        "item": `https://www.ethnicjunction.com${bc.href}`
       }))
     ]
   };

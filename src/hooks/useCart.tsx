@@ -21,7 +21,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     setIsMounted(true);
-    const storedCart = localStorage.getItem('threadhub-cart');
+    const storedCart = localStorage.getItem('ethnic-junction-cart');
     if (storedCart) {
       try {
         setItems(JSON.parse(storedCart));
@@ -33,7 +33,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (isMounted) {
-      localStorage.setItem('threadhub-cart', JSON.stringify(items));
+      localStorage.setItem('ethnic-junction-cart', JSON.stringify(items));
     }
   }, [items, isMounted]);
 

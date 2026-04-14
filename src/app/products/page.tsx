@@ -3,7 +3,7 @@ import { products } from '@/lib/sampleData';
 import { ProductsClient } from './ProductsClient';
 
 export const metadata: Metadata = {
-  title: "Shop Collection — ThreadHub",
+  title: "Shop Collection — Ethnic Junction",
   description: "Browse our extensive collection of Men's, Women's, and Unisex clothing, including t-shirts, hoodies, and authentic ethnic wear.",
 };
 

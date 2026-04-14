@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           
           <div className="space-y-4">
-            <h3 className="text-xl font-bold tracking-tight">ThreadHub</h3>
+            <h3 className="text-xl font-bold tracking-tight">Ethnic Junction</h3>
             <p className="text-sm text-ink/80">
               Premium clothing, custom prints, and authentic ethnic wear tailored for the youth.
             </p>
@@ -69,7 +69,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-ink/10 pt-8 text-center sm:flex sm:items-center sm:justify-between sm:text-left">
-          <p className="text-sm text-ink/70">© {new Date().getFullYear()} ThreadHub. Made in Bengaluru with love.</p>
+          <p className="text-sm text-ink/70">© {new Date().getFullYear()} Ethnic Junction. Made in Bengaluru with love.</p>
           <div className="mt-4 space-x-4 text-sm text-ink/70 sm:mt-0">
             <Link href="/privacy" className="hover:text-ink">Privacy</Link>
             <Link href="/terms" className="hover:text-ink">Terms</Link>

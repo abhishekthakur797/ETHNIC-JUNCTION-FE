@@ -38,7 +38,7 @@ export function Navbar() {
         {/* Center/Left: Logo */}
         <div className="flex flex-1 justify-center md:justify-start">
           <Link href="/" className="text-2xl font-bold tracking-tight text-ink">
-            ThreadHub
+            Ethnic Junction
           </Link>
         </div>
 

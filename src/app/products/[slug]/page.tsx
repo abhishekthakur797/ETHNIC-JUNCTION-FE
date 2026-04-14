@@ -10,11 +10,11 @@ export async function generateMetadata(
   const product = products.find(p => p.slug === resolvedParams.slug);
 
   if (!product) {
-    return { title: 'Product Not Found - ThreadHub' };
+    return { title: 'Product Not Found - Ethnic Junction' };
   }
 
   return {
-    title: `${product.name} | ThreadHub`,
+    title: `${product.name} | Ethnic Junction`,
     description: product.description,
   };
 }

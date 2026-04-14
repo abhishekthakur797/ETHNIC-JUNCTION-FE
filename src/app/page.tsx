@@ -6,7 +6,7 @@ import { products } from '@/lib/sampleData';
 export const revalidate = 86400; // SSG daily revalidation
 
 export const metadata = {
-  title: 'ThreadHub — Home',
+  title: 'Ethnic Junction — Home',
 };
 
 export default function Home() {

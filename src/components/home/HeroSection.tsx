@@ -66,7 +66,7 @@ export function HeroSection() {
             <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[80%] h-full rounded-2xl overflow-hidden shadow-2xl z-10 border-4 border-white">
               <Image 
                 src="https://picsum.photos/seed/hero1/800/1000" 
-                alt="Models wearing ThreadHub collection" 
+                alt="Models wearing Ethnic Junction collection" 
                 fill 
                 className="object-cover" 
                 priority

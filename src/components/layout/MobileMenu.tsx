@@ -36,7 +36,7 @@ export function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) {
           >
             <div className="flex items-center justify-between mb-8">
               <Link href="/" onClick={onClose} className="text-2xl font-bold text-ink">
-                ThreadHub
+                Ethnic Junction
               </Link>
               <button onClick={onClose} aria-label="Close Menu" className="p-2 text-muted-text hover:text-ink">
                 <X className="h-6 w-6" />
