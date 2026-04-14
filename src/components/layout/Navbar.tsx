@@ -17,7 +17,6 @@ export function Navbar() {
     { name: 'Men', href: '/products?gender=men' },
     { name: 'Women', href: '/products?gender=women' },
     { name: 'Custom Print', href: '/products?category=custom-print' },
-    { name: 'Sale', href: '/products?sale=true' },
   ];
 
   return (

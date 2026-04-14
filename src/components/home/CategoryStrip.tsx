@@ -7,7 +7,6 @@ export function CategoryStrip() {
     { name: 'Men', href: '/products?gender=men', color: 'bg-ink text-white' },
     { name: 'Women', href: '/products?gender=women', color: 'bg-[#f0e6ff] text-ink' },
     { name: 'Custom Print', href: '/products?category=custom-print', color: 'bg-[#b5ead7] text-ink' },
-    { name: 'Sale', href: '/products?sale=true', color: 'bg-[#ffd6e0] text-ink' },
     { name: 'New Arrivals', href: '/products?sort=newest', color: 'border border-border-color bg-white text-ink' },
   ];
 
