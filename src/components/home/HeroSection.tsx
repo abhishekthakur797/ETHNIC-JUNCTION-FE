@@ -2,87 +2,97 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Badge } from '../ui/Badge';
 import Image from 'next/image';
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-[#f0e6ff] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-      {/* Abstract Shapes */}
-      <div className="absolute inset-0 z-0 opacity-40">
-        <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-[#b5ead7] blur-3xl" />
-        <div className="absolute top-1/2 -left-24 h-64 w-64 -translate-y-1/2 rounded-full bg-[#ffd6e0] blur-3xl" />
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+    <section className="bg-white px-2 py-4 sm:px-4 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        {/* Amazon/Flipkart style Banner Container */}
+        <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-blue-950 via-indigo-900 to-purple-900 shadow-2xl h-[450px] lg:h-[500px]">
           
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="flex flex-col items-start space-y-6"
-          >
-            <Badge variant="mint" className="text-sm px-3 py-1">
-              🚚 Free Same-Day Delivery in Bengaluru
-            </Badge>
+          {/* Abstract festive accents */}
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute -top-20 -left-20 h-64 w-64 rounded-full bg-pink-500 blur-3xl mix-blend-screen" />
+            <div className="absolute top-1/2 right-1/4 h-80 w-80 -translate-y-1/2 rounded-full bg-blue-400 blur-3xl mix-blend-screen" />
+          </div>
+
+          <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-between z-10 px-6 sm:px-12 lg:px-20 h-full">
             
-            <h1 className="text-5xl font-extrabold tracking-tight text-ink md:text-6xl/tight lg:text-7xl/tight">
-              Wear Your Vibe. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-ink to-ink/60">
-                Own The Streets.
-              </span>
-            </h1>
-            
-            <p className="max-w-lg text-lg text-ink/80">
-              Discover premium casual wear, strictly authentic ethnic pieces, and 
-              custom printed tees tailored for the Bengaluru youth ecosystem.
-            </p>
-            
-            <div className="flex flex-wrap gap-4 pt-4">
+            {/* Left Content - Typography & CTA */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="flex-1 flex flex-col items-start justify-center pt-8 md:pt-0 pb-8 h-full z-20 space-y-4 md:space-y-6"
+            >
+              <div className="inline-flex items-center rounded-full border-2 border-yellow-400 bg-yellow-400/10 px-4 py-1.5 text-sm font-bold text-yellow-400 backdrop-blur-sm">
+                ⭐ BIGGEST FASHION FESTIVAL ⭐
+              </div>
+              
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black italic tracking-tighter text-white uppercase drop-shadow-md leading-none">
+                MEGA SALE <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">
+                  LIVE NOW
+                </span>
+              </h1>
+
+              <div className="inline-block bg-white text-blue-900 font-black text-2xl sm:text-3xl px-4 py-2 rotate-[-2deg] shadow-lg">
+                50-80% OFF
+              </div>
+              
+              <p className="max-w-md text-lg font-medium text-white/90 drop-shadow">
+                Grab the best deals on Men's Streetwear & beautiful Women's Ethnic collections.
+              </p>
+              
               <Link 
                 href="/products" 
-                className="inline-flex h-12 items-center justify-center rounded-lg bg-ink px-8 text-base font-medium text-white transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-ink/20"
+                className="mt-6 inline-flex h-14 items-center justify-center rounded-md bg-yellow-400 px-10 text-lg font-bold text-blue-950 transition-all hover:bg-yellow-300 hover:scale-105 hover:shadow-xl shadow-yellow-500/20"
               >
-                Shop Collection
+                SHOP NOW
               </Link>
-              <Link 
-                href="/products?category=custom-print" 
-                className="inline-flex h-12 items-center justify-center rounded-lg border-2 border-ink bg-transparent px-8 text-base font-medium text-ink transition-colors hover:bg-ink/5"
-              >
-                Custom Prints
-              </Link>
-            </div>
-          </motion.div>
+            </motion.div>
 
-          {/* Hero Image Group */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative hidden lg:block h-[500px] w-full"
-          >
-            {/* Main Image */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[80%] h-full rounded-2xl overflow-hidden shadow-2xl z-10 border-4 border-white">
-              <Image 
-                src="https://picsum.photos/seed/hero1/800/1000" 
-                alt="Models wearing Ethnic Junction collection" 
-                fill 
-                className="object-cover" 
-                priority
-              />
-            </div>
-            
-            {/* Secondary offset image */}
-            <div className="absolute left-0 bottom-12 w-[50%] h-[60%] rounded-2xl overflow-hidden shadow-xl z-20 border-4 border-white">
-              <Image 
-                src="https://picsum.photos/seed/hero2/600/800" 
-                alt="Custom print T-shirt detail" 
-                fill 
-                className="object-cover" 
-              />
-            </div>
-          </motion.div>
+            {/* Right Content - Images floating */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="hidden lg:flex flex-1 relative h-full w-full items-end justify-center pb-4"
+            >
+              {/* Product Image 1 - Men's Ethnic */}
+              <div className="absolute right-[45%] bottom-0 z-10 w-64 h-[400px] transform rotate-[-4deg] transition-transform hover:rotate-[-2deg] hover:z-30">
+                <div className="relative w-full h-full rounded-2xl border-[6px] border-white shadow-2xl overflow-hidden bg-gray-100">
+                  <Image 
+                    src="https://images.unsplash.com/photo-1597983073493-272e70e28ec4?auto=format&fit=crop&q=80&w=800" 
+                    alt="Men's Kurta Sale" 
+                    fill 
+                    className="object-cover object-top"
+                  />
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-red-600 px-3 py-1 text-sm font-bold text-white shadow-lg">
+                    UNDER ₹999
+                  </div>
+                </div>
+              </div>
+
+              {/* Product Image 2 - Women's Ethnic */}
+              <div className="absolute right-0 bottom-4 z-20 w-72 h-[420px] transform rotate-[3deg] transition-transform hover:rotate-[1deg] hover:scale-105">
+                <div className="relative w-full h-full rounded-2xl border-[6px] border-white shadow-2xl overflow-hidden bg-gray-100">
+                  <Image 
+                    src="https://images.unsplash.com/photo-1617255959957-c8c7d425712e?auto=format&fit=crop&q=80&w=800" 
+                    alt="Women's Lehenga Sale" 
+                    fill 
+                    className="object-cover object-center"
+                    priority
+                  />
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-red-600 px-3 py-1 text-sm font-bold text-white shadow-lg">
+                    MIN 60% OFF
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
         </div>
       </div>
     </section>
